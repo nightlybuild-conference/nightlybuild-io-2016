@@ -462,28 +462,106 @@ h2 {
     }
 }
 
+// Footer List
 .partner-list {
-    display: flex;
+    margin-bottom: 2rem;
     padding: 0;
     list-style: none;
 
-    li {
+    @media (min-width: 45em) {
         display: flex;
-        max-width: 32%;
-        margin-right: 2%;
+        flex-direction: row;
+    }
+
+    > li {
+        padding: 1.25rem;
+        background-color: #fff;
+        color: #263238;
+
+        @media (min-width: 45em) {
+            display: flex;
+            flex-direction: column;
+            max-width: 32%;
+            margin-right: 2%;
+        }
 
         &:last-child {
             margin-right: 0;
         }
+
+        h4 {
+            margin: 1rem auto 0.5rem 0;
+            color: #263238;
+        }
+
+        .sponsor-special-banner {
+            position: relative;
+            left: -1.25rem;
+            top: -2.25rem;
+            width: calc(100% + 2.5rem);
+            padding: 2rem 0.5rem;
+            text-align: center;
+        }
+
+        .banner-coffee {
+            background-color: #795548;
+            color: #fff;
+        }
+
+        .banner-beer {
+            background-color: #ffeb3b;
+            color: #000;
+        }
+
+        .image {
+            display: flex;
+            align-self: center;
+            margin: 0 auto;
+
+            @media (min-width: 45em) {
+                width: 25rem;
+            }
+        }
+
+        .text {
+            margin-top: 0;
+        }
+
+        .links {
+            margin-top: 1rem;
+            padding: 0;
+            list-style: none;
+
+            li {
+                margin-bottom: 0.5rem;
+
+                a {
+                    text-transform: uppercase;
+                    letter-spacing: 0.1rem;
+                    font-size: 0.8rem;
+                    font-weight: bold;
+                    color: #7DCFB6;
+                }
+            }
+        }
+
+        a {
+            color: #263238;
+        }
+
+        img {
+            max-width: 100%;
+        }
     }
 
     .link {
-        flex: 1;
+        min-height: 10rem;
         display: block;
-        padding: 1.25rem;
-        background-color: #fff;
-        color: #263238;
         text-decoration: none;
+
+        @media (min-width: 54em) {
+            height: 20rem;
+        }
     }
 
     .text {
@@ -491,11 +569,30 @@ h2 {
     }
 
     .image {
-        display: inline-block;
-        width: 15rem;
-        // height: 10rem;
         max-width: 100%;
         height: auto;
+    }
+}
+
+.partner-list.partner--gold {
+    li {
+        width: 48%;
+        max-width: 100%;
+
+        @media (max-width: 42em) {
+            width: 100%;
+        }
+    }
+
+}
+
+.partner-list.partner--bronze {
+    li {
+        width: 23%;
+
+        @media (max-width: 42em) {
+            width: 100%;
+        }
     }
 }
 
