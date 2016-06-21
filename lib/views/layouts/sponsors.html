@@ -1,0 +1,47 @@
+<html lang="en">
+    <head>
+        <% include 'lib/views/blocks/layout/_head' %>
+    </head>
+    <body>
+        <header class="header" role="banner">
+            <nav class="navigation" role="navigation">
+                <a href="/" title="Nightlybuild.io"><img class="logo" src="/img/logo-2016.svg" alt="Nightlybuild"></a>
+                <ul>
+                    <li>
+                        <a href="/#central-theme">Central Theme</a>
+                    </li>
+                    <li <% if @page == 'speaker' : %>class="is-active"<% end %>>
+                        <a href="/speaker">Speaker</a>
+                    </li>
+                    <li <% if @page == 'sponsors' : %>class="is-active"<% end %>>
+                        <a href="/sponsors">Sponsors</a>
+                    </li>
+                    <li>
+                        <a href="/#tickets">Buy Tickets</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <h1>NightlyBuild <span class="special-color">2016</span>.</h1>
+            <p><strong>Cologne, Germany.</strong> <a href="http://www.theaterhaus-koeln.de/
+">Theaterhaus</a>. <span class="special-color"><strong>September, 2nd</strong> 2016</span>.</p>
+
+            <h3 class="rotate-left">A hand-crafted after work conference for web enthusiasts loving technology, design and inspiration in Cologne, Germany.</h3>
+        </header>
+
+        <main class="main" role="main">
+            <% content %>
+        </main>
+
+        <footer class="footer" role="complementary">
+            <ul class="footer-nav">
+                <li><a href="/legal">Legal Notice</a></li>
+                <li><a href="/coc">Code Of Conduct</a></li>
+                <li><a href="https://facebook.com/nightlybuildio">Facebook</a></li>
+                <li><a href="https://twitter.com/nightlybuildio">Twitter</a></li>
+            </ul>
+        </footer>
+
+        <% include 'lib/views/blocks/layout/_foot' %>
+    </body>
+</html>
